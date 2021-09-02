@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import NumberOfEvents from '../NumberOfEvents';
-// import { mockData } from '../mock-data';
 
 describe('<NumberOfEvents /> component', () => {
   let NumberOfEventsWrapper;
@@ -18,11 +17,11 @@ describe('<NumberOfEvents /> component', () => {
     expect(NumberOfEventsWrapper.find('.number').prop('value')).toBe(numberOfEvents);
   });
 
-  // test('change state when text input changes', () => {
-  //   NumberOfEventsWrapper.setState({ numberOfEvents: 32 });
-  //   const eventObject = { target: { value: 12 } };
-  //   NumberOfEventsWrapper.find('.number').simulate('change', eventObject);
-  //   expect(NumberOfEventsWrapper.state('numberofevents')).toBe(12);
-  // });
+  test('change state when text input changes', () => {
+    // NumberOfEventsWrapper.setState({ numberOfEvents: 32 });
+    const eventObject = { target: { value: 16 } };
+    NumberOfEventsWrapper.find('#number').simulate('change', eventObject);
+    expect(NumberOfEventsWrapper.state('numberOfEvents')).toBe(16);
+  });
 
 });
