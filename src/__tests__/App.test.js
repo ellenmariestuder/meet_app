@@ -78,14 +78,18 @@ describe('<App /> integration', () => {
   test('render events list length matching ueser "numberOfEvents" input', () => {
     const AppWrapper = mount(<App />);
     const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
-    // AppWrapper.instance().updateEvents = jest.fn();
-    jest.spyOn(AppWrapper.instance(), 'updateEvents');
+
+    AppWrapper.instance().updateEvents = jest.fn();
+    // jest.spyOn(AppWrapper.instance(), 'updateEvents');
     AppWrapper.instance().forceUpdate();
     NumberOfEventsWrapper.setState({ numberOfEvents: 32 });
+
     const eventObject = { target: { value: 3 } };
+
     NumberOfEventsWrapper.find('.number').simulate('change', eventObject);
     expect(NumberOfEventsWrapper.state('numberOfEvents')).toBe(3);
     expect(AppWrapper.instance().updateEvents).toHaveBeenCalledWith(null, 3);
+
     AppWrapper.unmount();
   });
 
