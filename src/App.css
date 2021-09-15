@@ -51,7 +51,7 @@ input[type="number"] {
 
 .suggestions {
   width: 250px;
-  position: absolute;
+  /* position: absolute; */
   z-index: 2;
   align-self: center;
   margin: 0;
@@ -114,7 +114,7 @@ input[type="number"] {
   overflow-x: hidden;
 }
 
-.numberOfEvents {
+.NumberOfEvents {
   width: 200px;
   margin: 20px auto;
   text-align: center;
@@ -129,8 +129,8 @@ input[type="number"] {
 }
 
 .Alert {
-  position: fixed;
-  top: 20px;
+  border-radius: 25px;
+  padding: 15px;
 }
 
 .data-vis-wrapper {
