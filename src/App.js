@@ -86,9 +86,10 @@ class App extends Component {
 
         {!navigator.onLine ? <OfflineAlert text={"You are currently offline. Results may not be current."} /> : ""}
 
-        <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
-
-        <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
+        <div className="searchFields">
+          <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+          <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
+        </div>
 
         <h4>Events In Each City</h4>
         <div className="data-vis-wrapper">
@@ -99,8 +100,8 @@ class App extends Component {
           <ResponsiveContainer height={400}>
             <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20, }} >
               <CartesianGrid />
-              <XAxis type="category" dataKey="city" name="city" />
-              <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
+              <XAxis type="category" dataKey="city" name="City" />
+              <YAxis type="number" dataKey="number" name="Number of Events" allowDecimals={false} />
               <Tooltip cursor={{ strokeDasharray: '3 3' }} />
               <Scatter name="" data={this.getData()} fill="#8884d8" />
             </ScatterChart>
