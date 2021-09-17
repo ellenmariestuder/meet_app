@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 
 const EventGenre = ({ events }) => {
-  // const data = [
-  //   { name: 'Group A', value: 400 },
-  //   { name: 'Group B', value: 400 },
-  //   { name: 'Group C', value: 400 },
-  //   { name: 'Group D', value: 400 },
-  // ];
 
   const [data, setData] = useState([]);
 
