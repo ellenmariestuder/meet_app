@@ -82,7 +82,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Meet App</h1>
-        <h4>Choose your nearest city</h4>
+        <h4>Choose Your Nearest City</h4>
 
         {!navigator.onLine ? <OfflineAlert text={"You are currently offline. Results may not be current."} /> : ""}
 
@@ -91,8 +91,11 @@ class App extends Component {
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
 
         <div className="data-vis-wrapper">
-          {/* <h4>Events in each city</h4> */}
+
+          <h4>Events In Each City</h4>
+          <h5>Events by Genre</h5>
           <EventGenre events={this.state.events} />
+          <h5>Number of Events</h5>
           <ResponsiveContainer height={400}>
             <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20, }} >
               <CartesianGrid />
@@ -104,6 +107,7 @@ class App extends Component {
           </ResponsiveContainer>
         </div>
 
+        <h4>Events In Your City:</h4>
         <EventList events={this.state.events} />
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
       </div>
