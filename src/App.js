@@ -90,9 +90,9 @@ class App extends Component {
 
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
 
+        <h4>Events In Each City</h4>
         <div className="data-vis-wrapper">
 
-          <h4>Events In Each City</h4>
           <h5>Events by Genre</h5>
           <EventGenre events={this.state.events} />
           <h5>Number of Events</h5>

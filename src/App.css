@@ -143,6 +143,11 @@ input[type="number"] {
   min-width: 100%;
   display: flex;
 }
+
+h5 {
+  display: block;
+}
+
 .recharts-surface {
   overflow: visible;
 }
