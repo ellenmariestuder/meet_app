@@ -128,9 +128,9 @@ input[type="number"] {
   font-family: sans-serif;
 }
 
-.Alert {
-  border-radius: 25px;
-  padding: 15px;
+.Alert p {
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .data-vis-wrapper {
