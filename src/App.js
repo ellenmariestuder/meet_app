@@ -94,9 +94,9 @@ class App extends Component {
         <h4>Events In Each City</h4>
         <div className="data-vis-wrapper">
 
-          <h5>Events by Genre</h5>
+          {/* <h5>Events by Genre</h5> */}
           <EventGenre events={this.state.events} />
-          <h5>Number of Events</h5>
+          {/* <h5>Number of Events</h5> */}
           <ResponsiveContainer height={400}>
             <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20, }} >
               <CartesianGrid />
